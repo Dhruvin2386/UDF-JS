@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question-5</title>
+</head>
+<body>
+    <h2>Formula Calculation</h2>
+    <label for="a">Enter coefficient a:</label>
+    <input type="number" id="a" step="any">
+    <br>
+    <br>
+    <label for="b">Enter coefficient b:</label>
+    <input type="number" id="b" step="any">
+    <br>
+    <br>
+    <label for="c">Enter coefficient c:</label>
+    <input type="number" id="c" step="any">
+    <br>
+    <br>
+    <button onclick="calculate()">Calculate Result</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateFormula(a, b, c) {
+
+            return ((a*a) + (2*a*b) + (b*b));
+        }
+
+        function calculate() {
+
+            const a = document.getElementById('a').value;
+            const b = document.getElementById('b').value;
+            const c = document.getElementById('c').value;
+            
+            const result = calculateFormula(a, b, c);
+            
+            document.getElementById('result').textContent = `The result of the formula is ${result.toFixed(2)}.`;
+        }
+    </script>
+</body>
+</html>

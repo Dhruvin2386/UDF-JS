@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question-4</title>
+</head>
+<body>
+    <h2>Rectangle Area Calculation</h2>
+    <label for="length">Enter the length :</label>
+    <input type="number" id="length" step="any">
+    <br>
+    <br>
+    <label for="height">Enter the height :</label>
+    <input type="number" id="height" step="any">
+    <br>
+    <br>
+    <button onclick="calculate()">Calculate Area</button>
+    <p id="result"></p>
+
+    <script>
+
+        function calculaterectangleArea(length, height) {
+
+            return (length * height);
+        }
+
+        function calculate() {
+
+            const length = document.getElementById('length').value;
+            const height = document.getElementById('height').value;
+            
+            const area = calculaterectangleArea(length, height);
+            
+            document.getElementById('result').textContent = `The area of the Rectangle with base length ${length} and height ${height} is ${area.toFixed(2)}.`;
+        }
+    </script>
+</body>
+</html>
